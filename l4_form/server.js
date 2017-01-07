@@ -12,7 +12,7 @@ app.post('/form', (req, res) => {
   res.end(str.split('').reverse().join(''));
 });
 
-app.listen(process.argv[2]);
+app.listen(process.argv[2] || 8080);
 
 //SOLUTION
 // var express = require('express')
