@@ -1,6 +1,6 @@
-var path = require('path');
-var express = require('express');
-var app = express();
+let path = require('path');
+let express = require('express');
+let app = express();
 
 app.set('view engine', 'jade');
 app.set('views', process.argv[3] || path.join(__dirname, 'templates'))

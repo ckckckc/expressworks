@@ -1,7 +1,7 @@
-var express = require('express');
-var path    = require('path');
-var app = express();
-var publicPath = process.argv[3] || path.join(__dirname, 'public');
+let express = require('express');
+let path    = require('path');
+let app = express();
+let publicPath = process.argv[3] || path.join(__dirname, 'public');
 
 app.use(express.static(publicPath));
 
