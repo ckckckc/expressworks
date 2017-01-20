@@ -7,7 +7,7 @@ let directory = process.argv[3] || path.join(__dirname, 'styl');
 
 let app = express();
 
-app.use(styl.middleware(directory))
+app.use(styl.middleware(directory));
 
 app.use(express.static(directory));
 
