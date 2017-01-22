@@ -5,9 +5,9 @@ var path    = require('path');
 var app = express();
 
 app.get('/books', function(req, res) {
-  var bookPath = process.argv[3] || path.join(__dirname, 'book.txt');
+  var booksPath = process.argv[3] || path.join(__dirname, 'books.txt');
 
-  fs.readFile(bookPath, 'utf8', function(err, data){
+  fs.readFile(booksPath, 'utf8', function(err, data){
     if (err) {
       console.log(err);
     } else {
