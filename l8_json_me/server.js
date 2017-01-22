@@ -8,11 +8,14 @@ app.get('/books', function(req, res) {
   var booksPath = process.argv[3] || path.join(__dirname, 'books.txt');
 
   fs.readFile(booksPath, 'utf8', function(err, data){
-    if (err) {
-      console.log(err);
-    } else {
+    if (err) return res.sendStatus(500);
+
+    try {
       res.json(JSON.parse(data));
+    } catch (e) {
+      res.sendStatus(500);
     }
+
   });
 });
 
